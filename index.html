@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Bengkel Motor Sejahtera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1c1c1c;
+      color: #f5f5f5;
+    }
+
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: gold;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    main {
+      padding: 30px;
+      background: #222;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('bengkel.jpg') center/cover no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 12px;
+      color: gold;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: gold;
+      color: #111;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    .highlights {
+      background: #2b2b2b;
+      padding: 25px;
+      margin-top: 30px;
+      border-left: 5px solid gold;
+      border-radius: 10px;
+    }
+
+    .highlights h3 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .highlights ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .highlights li {
+      margin: 10px 0;
+      font-size: 1.1em;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .highlights li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: gold;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    .hidden { display: none; }
+    .active { display: block; }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      background: #2e2e2e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .about-text h2 {
+      color: gold;
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
+
+    .about-text h4 {
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+
+    .about-text p {
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
+    .about-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-img img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .about-img img:hover {
+      transform: scale(1.03);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 5px;
+      font-family: inherit;
+    }
+
+    form {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-top: 10px;
+      color: #eee;
+    }
+
+    @media (max-width: 768px) {
+      .about-container { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bengkel Motor Sejahtera</h1>
+    <nav>
+      <a href="#" onclick="showPage('home')">Beranda</a>
+      <a href="#" onclick="showPage('about')">Tentang Kami</a>
+      <a href="#" onclick="showPage('services')">Layanan</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="active">
+      <div class="hero">
+        <style>
+  .hero {
+    background: url('Foto/orang2.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    border-radius: 8px;
+  }
+</style>
+        <h2>Servis Premium untuk Motor Kesayangan Anda</h2>
+        <p>Layanan profesional, cepat, dan bergaransi.</p>
+        <a href="#" class="cta-button" onclick="showPage('services')">Booking Sekarang</a>
+      </div>
+      <section class="highlights">
+        <h3>Kenapa Memilih Kami?</h3>
+        <ul>
+          <li>Mekanik bersertifikat & profesional</li>
+          <li>Sparepart resmi & terjamin</li>
+          <li>Servis cepat, bisa ditunggu</li>
+          <li>Gratis cek motor & konsultasi</li>
+          <li>Buka 7 hari seminggu</li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="about" class="hidden">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Tentang Kami</h2>
+          <h4>Melayani dengan Hati & Keahlian Sejak 2010</h4>
+          <p>Bengkel Motor Sejahtera adalah bengkel profesional yang menggabungkan teknologi modern dengan layanan pelanggan terbaik.</p>
+          <p>Kami percaya bahwa motor bukan sekadar kendaraan, tapi partner perjalanan Anda. Karena itu, kami merawatnya sebaik mungkin.</p>
+          <p><strong>✔ 14+ Tahun Pengalaman<br>✔ Ratusan Ulasan Positif<br>✔ Jaminan Kualitas & Kepuasan</strong></p>
+        </div>
+        <div class="about-img">
+          <img src="Foto/bengkelmtr1.jpg" alt="Tentang Kami - Bengkel" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="hidden">
+      <h2>Layanan Kami</h2>
+      <ul>
+        <li>Servis Berkala</li>
+        <li>Ganti Oli & Tune-Up</li>
+        <li>Perbaikan Mesin & Kelistrikan</li>
+        <li>Servis Rem, Ban, & Suspensi</li>
+        <li>Penggantian Aki & Injeksi</li>
+      </ul>
+
+      <h3 style="margin-top: 30px;">Form Pemesanan</h3>
+      <form id="booking-form">
+        <label>Nama Lengkap:</label>
+        <input type="text" name="nama" required />
+        <label>No. WhatsApp:</label>
+        <input type="tel" name="nohp" required />
+        <label>Jenis Motor:</label>
+        <input type="text" name="motor" required />
+        <label>Jadwal Servis:</label>
+        <input type="date" name="jadwal" required />
+        <button type="submit" class="cta-button">Kirim Pemesanan</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Web Ini Dibuat Oleh Baguss — Semua Hak Dilindungi Bejirr</p>
+  </footer>
+
+  <a href="https://wa.me/628986856341?text=Halo%20Bengkel%20Motor%20Sejahtera,%20saya%20ingin%20booking%20servis."
+     target="_blank"
+     style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:12px 20px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:999;">
+    WhatsApp Kami
+  </a>
+
+  <script>
+    function showPage(pageId) {
+      const pages = ['home', 'about', 'services'];
+      pages.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+        document.getElementById(id).classList.remove('active');
+      });
+      document.getElementById(pageId).classList.remove('hidden');
+      document.getElementById(pageId).classList.add('active');
+    }
+
+    document.getElementById("booking-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Pemesanan berhasil dikirim! Kami akan segera menghubungi Anda.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
